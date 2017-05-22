@@ -19,6 +19,23 @@
 			}
 			.two-col-list li {
 			}
+			#title-card {
+				text-align: left;
+				font-size: .75em;
+			}
+			#title-card p {
+				margin-top: 0;
+				margin-bottom: .25em;
+			}
+			#title-card p + p {
+				font-size: .8em;
+			}
+			#title-card p + p + p + p {
+				margin-bottom: 2em;
+			}
+			#title-card p + p + p + p + p {
+				margin-bottom: 0;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -33,6 +50,19 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
+				<section id="title-card">
+					<h1>Intro to CMB2</h1>
+					<p>Benjamin Turner</p>
+					<p><a href="https://passionsplay.com">https://passionsplay.com</a></p>
+					<p><a href="https://github.com/bgturner">https://github.com/bgturner</a></p>
+					<p><a href="https://twitter.com/passionsplay">@passionsplay</a></p>
+					<p></p>
+					<p><a href="https://cmb2.io://cmb2.io/">https://cmb2.io/</a></p>
+					<p><a href="https://wordpress.org/plugins/cmb2/">https://wordpress.org/plugins/cmb2/</a></p>
+					<p><a href="https://github.com/CMB2/CMB2">https://github.com/CMB2/CMB2</a></p>
+					<p><a href="https://github.com/bgturner/pp-intro-to-cmb2-example-fields">An Example Plugin using CMB2</a></p>
+				</section>
 
 				<section id="what-are-custom-fields">
 					
@@ -57,11 +87,11 @@
 					<section>
 						<p>WordPress allows us to do this out of the box.</p>
 						<img src="images/wp-custom-fields-metabox.png" alt="Example of the default custom fields editor in WordPress">
-						<p>Note that WP calls the Key 'Name' in this instance.</p>
+						<p>Note that WordPress uses 'Name' here instead of 'Key'</p>
 					</section>
 
 					<section>
-						<p>If that metabox isn't displayed, you might have to enable it by checking "Custom Fields" from the "Screen Options" button towards the top of the edit post screen.</p>
+						<p>If that metabox isn't displayed, you might have to enable it by checking "Custom Fields" from the "Screen Options" button toward the top of the "edit post screen".</p>
 						<img src="images/enable-wp-custom-fields-metabox.png" alt="Example of the default custom fields editor in WordPress">
 					</section>
 
@@ -78,18 +108,18 @@
 					</section>
 
 					<section>
-						<p>It doesn't show <em>all</em> of the custom fields for a post. (ie. things prefixed with an underscore)</p>
-						<img src="images/hidden-custom-fields.png" alt="Displaying the hidden custom fields">
-					</section>
-
-					<section>
 						<p>Who really wants to hand enter something like location?</p>
-						<p>US Bankcorp Tower</p>
+						<p>US Bancorp Tower</p>
 						<ul>
 							<li>Lat: 45.5123103</li>
 							<li>Long: -122.6686434</li>
 						</ul>
-						<img src="images/finding-lat-lng.png" alt="Finding the latitude and longitude for the Us Bankcorp Building in PDX.">
+						<img src="images/finding-lat-lng.png" alt="Finding the latitude and longitude for the Us Bancorp Building in PDX.">
+					</section>
+
+					<section>
+						<p>It doesn't show <em>all</em> of the custom fields for a post (i.e. things prefixed with an underscore).</p>
+						<img src="images/hidden-custom-fields.png" alt="Displaying the hidden custom fields">
 					</section>
 
 				</section>
@@ -109,26 +139,11 @@
 					<section>
 						<ul>
 							<li>Free and Open Source (GPLv2)</li>
-							<li>Configuration is in the code (and therefore easier to share and merge across a team during development)</li>
 							<li>Easy to extend to create new custom fields</li>
 							<li>Data Portability. The data still exists, and is available on the front end if CMB2 is disabled</li>
+							<li>Configuration is in the code (and therefore is easier to share and merge changes across a team during development)</li>
 						</ul>
 					</section>
-
-				</section>
-
-				<section id="installing-cmb2">
-
-					<h1>Installing CMB2</h1>
-
-					<p>There are lots of ways:</p>
-
-					<ul>
-						<li><a href="https://wordpress.org/plugins/cmb2/">WordPress.org (the typical way)</a></li>
-						<li><a href="https://github.com/CMB2/CMB2">Github</a></li>
-						<li><a href="https://github.com/CMB2/CMB2#installation">Include it within your plugin / theme</a></li>
-						<li><a href="https://github.com/CMB2/CMB2#3rd-party-resources">Include Community created Custom Fields</a></li>
-					</ul>
 
 				</section>
 
@@ -140,6 +155,9 @@
 
 					<section>
 						<p>Nothing out of the box.</p>
+					</section>
+
+					<section>
 						<p>You have to write the code describing the kinds of meta fields you want.</p>
 					</section>
 
@@ -213,6 +231,31 @@ $cmb_demo->add_field( array(
 
 				</section>
 
+				<section id="more-info" style="">
+					<p>Benjamin Turner</p>
+					<p><a href="https://passionsplay.com">https://passionsplay.com</a></p>
+					<p><a href="https://github.com/bgturner">https://github.com/bgturner</a></p>
+					<p><a href="https://twitter.com/passionsplay">@passionsplay</a></p>
+					<p></p>
+					<p><a href="https://cmb2.io://cmb2.io/">https://cmb2.io/</a></p>
+					<p><a href="https://wordpress.org/plugins/cmb2/">https://wordpress.org/plugins/cmb2/</a></p>
+					<p><a href="https://github.com/CMB2/CMB2">https://github.com/CMB2/CMB2</a></p>
+				</section>
+
+				<section id="installing-cmb2">
+
+					<h1>Installing CMB2</h1>
+
+					<p>There are lots of ways:</p>
+
+					<ul>
+						<li><a href="https://wordpress.org/plugins/cmb2/">WordPress.org (the typical way)</a></li>
+						<li><a href="https://github.com/CMB2/CMB2">Github</a></li>
+						<li><a href="https://github.com/CMB2/CMB2#installation">Include it within your plugin / theme</a></li>
+						<li><a href="https://github.com/CMB2/CMB2#3rd-party-resources">Include custom fields created by the community</a></li>
+					</ul>
+
+				</section>
 
 			</div>
 		</div>
